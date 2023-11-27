@@ -1,0 +1,11 @@
+step 1-> I ran an nmap scan on the machine and discovered open ports.
+
+step 2-> açık portlarda 80 portunda dirb aracaını kullanarak dizin taraması yaptım ve neler çıktığına baktım
+
+step 3-> I did a directory scan using the dirb tool on port 80 on open ports and saw what came up
+
+step 4-> some services and versions of them caught my attention and I saved them in a file called potential. in turn I did some research to see what I could do with them.
+
+step 5-> After doing my research I decided to try the samba service running on port 139.
+
+step 6-> I did a search on metaspoit and used the linux/samba/trans2open exploit, but I wanted to change the payload and I used the payload/generic/shell_reverse_tcp payload. after making the necessary settings, I ran the exploit. I was able to enter the system and I logged in with root privileges and there was no need to upgrade any privileges.

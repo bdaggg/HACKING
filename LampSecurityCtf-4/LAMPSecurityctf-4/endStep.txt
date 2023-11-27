@@ -1,0 +1,3 @@
+└─# ssh -o KexAlgorithms=diffie-hellman-group1-sha1 -o HotsKeyAlgorithms=+ssh-dss dstevens@192.168.4.136
+
+pass = ilike2surf

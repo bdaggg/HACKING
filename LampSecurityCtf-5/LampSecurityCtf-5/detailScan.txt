@@ -1,0 +1,43 @@
+# Nmap 7.94 scan initiated Wed Sep 20 08:23:58 2023 as: nmap -p 22,25,80,110,111,139,143,445,901,3306 -sS -Pn -sV -O -vvv -o detailScan.txt 192.168.4.118
+Nmap scan report for 192.168.4.118
+Host is up, received arp-response (0.00054s latency).
+Scanned at 2023-09-20 08:23:58 EDT for 13s
+
+PORT     STATE SERVICE     REASON         VERSION
+22/tcp   open  ssh         syn-ack ttl 64 OpenSSH 4.7 (protocol 2.0)
+25/tcp   open  smtp        syn-ack ttl 64 Sendmail 8.14.1/8.14.1
+80/tcp   open  http        syn-ack ttl 64 Apache httpd 2.2.6 ((Fedora))
+110/tcp  open  pop3        syn-ack ttl 64 ipop3d 2006k.101
+111/tcp  open  rpcbind     syn-ack ttl 64 2-4 (RPC #100000)
+139/tcp  open  netbios-ssn syn-ack ttl 64 Samba smbd 3.X - 4.X (workgroup: MYGROUP)
+143/tcp  open  imap        syn-ack ttl 64 University of Washington IMAP imapd 2006k.396 (time zone: -0400)
+445/tcp  open  netbios-ssn syn-ack ttl 64 Samba smbd 3.X - 4.X (workgroup: MYGROUP)
+901/tcp  open  http        syn-ack ttl 64 Samba SWAT administration server
+3306/tcp open  mysql       syn-ack ttl 64 MySQL 5.0.45
+MAC Address: 00:0C:29:10:D8:29 (VMware)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.30
+TCP/IP fingerprint:
+OS:SCAN(V=7.94%E=4%D=9/20%OT=22%CT=%CU=32047%PV=Y%DS=1%DC=D%G=N%M=000C29%TM
+OS:=650AE46B%P=x86_64-pc-linux-gnu)SEQ(SP=C9%GCD=1%ISR=CF%TI=Z%CI=Z%II=I%TS
+OS:=A)OPS(O1=M5B4ST11NW4%O2=M5B4ST11NW4%O3=M5B4NNT11NW4%O4=M5B4ST11NW4%O5=M
+OS:5B4ST11NW4%O6=M5B4ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16
+OS:A0)ECN(R=Y%DF=Y%T=40%W=16D0%O=M5B4NNSNW4%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=
+OS:S+%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=Y%T=40%W=16A0%S=O%A=S+%F=AS%O=M5B4ST11N
+OS:W4%RD=0%Q=)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%
+OS:W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=
+OS:)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%
+OS:UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 0.004 days (since Wed Sep 20 08:18:35 2023)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=201 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Hosts: localhost.localdomain, 192.168.4.118; OS: Unix
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep 20 08:24:11 2023 -- 1 IP address (1 host up) scanned in 13.28 seconds

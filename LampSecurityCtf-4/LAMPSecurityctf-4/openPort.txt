@@ -1,0 +1,12 @@
+# Nmap 7.94 scan initiated Mon Sep 11 12:00:38 2023 as: nmap -p- -o openPort.txt 192.168.4.136
+Nmap scan report for 192.168.4.136
+Host is up (0.00034s latency).
+Not shown: 65378 filtered tcp ports (no-response), 153 filtered tcp ports (host-prohibited)
+PORT    STATE  SERVICE
+22/tcp  open   ssh
+25/tcp  open   smtp
+80/tcp  open   http
+631/tcp closed ipp
+MAC Address: 00:0C:29:C6:EA:11 (VMware)
+
+# Nmap done at Mon Sep 11 12:03:06 2023 -- 1 IP address (1 host up) scanned in 148.09 seconds

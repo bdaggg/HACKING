@@ -1,0 +1,71 @@
+# Nmap 7.94 scan initiated Sun Oct 29 14:40:48 2023 as: nmap -sT -sV -O -p 21,22,80,3389,8065 -vv -o detailScan.txt 192.168.4.114
+Nmap scan report for ubuntu (192.168.4.114)
+Host is up, received arp-response (0.00045s latency).
+Scanned at 2023-10-29 14:40:48 EDT for 89s
+
+PORT     STATE SERVICE       REASON  VERSION
+21/tcp   open  ftp           syn-ack vsftpd 3.0.3
+22/tcp   open  ssh           syn-ack OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http          syn-ack Apache httpd 2.4.29 ((Ubuntu))
+3389/tcp open  ms-wbt-server syn-ack xrdp
+8065/tcp open  unknown       syn-ack
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8065-TCP:V=7.94%I=7%D=10/29%Time=653EA736%P=x86_64-pc-linux-gnu%r(G
+SF:enericLines,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20
+SF:text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\
+SF:x20Request")%r(GetRequest,1023,"HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges
+SF::\x20bytes\r\nCache-Control:\x20no-cache,\x20max-age=31556926,\x20publi
+SF:c\r\nContent-Length:\x203657\r\nContent-Security-Policy:\x20frame-ances
+SF:tors\x20'self';\x20script-src\x20'self'\x20cdn\.segment\.com/analytics\
+SF:.js/\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nLast-Modified:\
+SF:x20Sun,\x2029\x20Oct\x202023\x2018:25:04\x20GMT\r\nX-Frame-Options:\x20
+SF:SAMEORIGIN\r\nX-Request-Id:\x205smh1zrp1pfwbxaknwt65yysjc\r\nX-Version-
+SF:Id:\x205\.18\.0\.5\.18\.0\.12da442d30d70d8726b0a9761a350d5a\.false\r\nD
+SF:ate:\x20Sun,\x2029\x20Oct\x202023\x2018:40:55\x20GMT\r\n\r\n<!DOCTYPE\x
+SF:20html>\n<html\x20lang=\"en\">\n<head>\n\x20\x20\x20\x20<meta\x20charse
+SF:t=\"utf-8\">\n\n\x20\x20\x20\x20<meta\x20name='viewport'\x20content='wi
+SF:dth=device-width,\x20initial-scale=1,\x20maximum-scale=1,\x20user-scala
+SF:ble=0'>\n\x20\x20\x20\x20<meta\x20name='robots'\x20content='noindex,\x2
+SF:0nofollow'>\n\x20\x20\x20\x20<meta\x20name='referrer'\x20content='no-re
+SF:ferrer'>\n\n\x20\x20\x20\x20<title>Mattermost</title>\n\n\x20\x20\x20\x
+SF:20<meta\x20name='mobile-web-app-capable'\x20content='yes'>\n\x20\x20\x2
+SF:0\x20<meta\x20name='application-name'\x20content='Mattermost'>\n\x20\x2
+SF:0\x20\x20<m")%r(HTTPOptions,5B,"HTTP/1\.0\x20405\x20Method\x20Not\x20Al
+SF:lowed\r\nDate:\x20Sun,\x2029\x20Oct\x202023\x2018:40:55\x20GMT\r\nConte
+SF:nt-Length:\x200\r\n\r\n")%r(RTSPRequest,67,"HTTP/1\.1\x20400\x20Bad\x20
+SF:Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:
+SF:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Help,67,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nCon
+SF:nection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(SSLSessionReq,67,"HT
+SF:TP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20cha
+SF:rset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Ter
+SF:minalServerCookie,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x
+SF:20Bad\x20Request");
+MAC Address: 00:0C:29:6D:93:BD (VMware)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.8
+TCP/IP fingerprint:
+OS:SCAN(V=7.94%E=4%D=10/29%OT=21%CT=%CU=31256%PV=Y%DS=1%DC=D%G=N%M=000C29%T
+OS:M=653EA789%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10C%TI=Z%CI=Z%II=I
+OS:%TS=A)OPS(O1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O
+OS:5=M5B4ST11NW7%O6=M5B4ST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6
+OS:=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O
+OS:%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=
+OS:0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%
+OS:S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(
+OS:R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=
+OS:N%T=40%CD=S)
+
+Uptime guess: 21.204 days (since Sun Oct  8 09:48:51 2023)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Oct 29 14:42:17 2023 -- 1 IP address (1 host up) scanned in 88.87 seconds

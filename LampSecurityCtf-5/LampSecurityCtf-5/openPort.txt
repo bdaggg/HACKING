@@ -1,0 +1,18 @@
+# Nmap 7.94 scan initiated Wed Sep 20 08:20:42 2023 as: nmap -Pn -o openPort.txt 192.168.4.118
+Nmap scan report for 192.168.4.118
+Host is up (0.0026s latency).
+Not shown: 990 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+25/tcp   open  smtp
+80/tcp   open  http
+110/tcp  open  pop3
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+143/tcp  open  imap
+445/tcp  open  microsoft-ds
+901/tcp  open  samba-swat
+3306/tcp open  mysql
+MAC Address: 00:0C:29:10:D8:29 (VMware)
+
+# Nmap done at Wed Sep 20 08:20:42 2023 -- 1 IP address (1 host up) scanned in 0.34 seconds

@@ -1,0 +1,157 @@
+# Nmap 7.94 scan initiated Mon Jul 31 17:01:54 2023 as: nmap -O -vvv -Pn -p 22,80,111,139,443,1024 --script vuln -o nmap-vuln-scan 192.168.4.101
+Nmap scan report for 192.168.4.101
+Host is up, received arp-response (0.00047s latency).
+Scanned at 2023-07-31 17:02:04 EDT for 313s
+
+PORT     STATE SERVICE     REASON
+22/tcp   open  ssh         syn-ack ttl 64
+80/tcp   open  http        syn-ack ttl 64
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+| http-trace: TRACE is enabled
+| Headers:
+| Date: Mon, 31 Jul 2023 05:16:31 GMT
+| Server: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b
+| Connection: close
+| Transfer-Encoding: chunked
+|_Content-Type: message/http
+| http-enum: 
+|   /test.php: Test page
+|   /icons/: Potentially interesting directory w/ listing on 'apache/1.3.20'
+|   /manual/: Potentially interesting directory w/ listing on 'apache/1.3.20'
+|_  /usage/: Potentially interesting folder
+111/tcp  open  rpcbind     syn-ack ttl 64
+139/tcp  open  netbios-ssn syn-ack ttl 64
+443/tcp  open  https       syn-ack ttl 64
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_sslv2-drown: ERROR: Script execution failed (use -d to debug)
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| ssl-ccs-injection: 
+|   VULNERABLE:
+|   SSL/TLS MITM vulnerability (CCS Injection)
+|     State: VULNERABLE
+|     Risk factor: High
+|       OpenSSL before 0.9.8za, 1.0.0 before 1.0.0m, and 1.0.1 before 1.0.1h
+|       does not properly restrict processing of ChangeCipherSpec messages,
+|       which allows man-in-the-middle attackers to trigger use of a zero
+|       length master key in certain OpenSSL-to-OpenSSL communications, and
+|       consequently hijack sessions or obtain sensitive information, via
+|       a crafted TLS handshake, aka the "CCS Injection" vulnerability.
+|           
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224
+|       http://www.openssl.org/news/secadv_20140605.txt
+|_      http://www.cvedetails.com/cve/2014-0224
+| ssl-poodle: 
+|   VULNERABLE:
+|   SSL POODLE information leak
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2014-3566  BID:70574
+|           The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other
+|           products, uses nondeterministic CBC padding, which makes it easier
+|           for man-in-the-middle attackers to obtain cleartext data via a
+|           padding-oracle attack, aka the "POODLE" issue.
+|     Disclosure date: 2014-10-14
+|     Check results:
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA
+|     References:
+|       https://www.imperialviolet.org/2014/10/14/poodle.html
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566
+|       https://www.openssl.org/~bodo/ssl-poodle.pdf
+|_      https://www.securityfocus.com/bid/70574
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+| ssl-dh-params: 
+|   VULNERABLE:
+|   Transport Layer Security (TLS) Protocol DHE_EXPORT Ciphers Downgrade MitM (Logjam)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2015-4000  BID:74733
+|       The Transport Layer Security (TLS) protocol contains a flaw that is
+|       triggered when handling Diffie-Hellman key exchanges defined with
+|       the DHE_EXPORT cipher. This may allow a man-in-the-middle attacker
+|       to downgrade the security of a TLS session to 512-bit export-grade
+|       cryptography, which is significantly weaker, allowing the attacker
+|       to more easily break the encryption and monitor or tamper with
+|       the encrypted stream.
+|     Disclosure date: 2015-5-19
+|     Check results:
+|       EXPORT-GRADE DH GROUP 1
+|             Cipher Suite: TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA
+|             Modulus Type: Safe prime
+|             Modulus Source: mod_ssl 2.0.x/512-bit MODP group with safe prime modulus
+|             Modulus Length: 512
+|             Generator Length: 8
+|             Public Key Length: 512
+|     References:
+|       https://weakdh.org
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000
+|       https://www.securityfocus.com/bid/74733
+|   
+|   Diffie-Hellman Key Exchange Insufficient Group Strength
+|     State: VULNERABLE
+|       Transport Layer Security (TLS) services that use Diffie-Hellman groups
+|       of insufficient strength, especially those using one of a few commonly
+|       shared groups, may be susceptible to passive eavesdropping attacks.
+|     Check results:
+|       WEAK DH GROUP 1
+|             Cipher Suite: TLS_DHE_RSA_WITH_DES_CBC_SHA
+|             Modulus Type: Safe prime
+|             Modulus Source: mod_ssl 2.0.x/1024-bit MODP group with safe prime modulus
+|             Modulus Length: 1024
+|             Generator Length: 8
+|             Public Key Length: 1024
+|     References:
+|_      https://weakdh.org
+1024/tcp open  kdm         syn-ack ttl 64
+MAC Address: 00:0C:29:7C:3A:16 (VMware)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 2.4.X
+OS CPE: cpe:/o:linux:linux_kernel:2.4
+OS details: Linux 2.4.9 - 2.4.18 (likely embedded)
+TCP/IP fingerprint:
+OS:SCAN(V=7.94%E=4%D=7/31%OT=22%CT=%CU=41803%PV=Y%DS=1%DC=D%G=N%M=000C29%TM
+OS:=64C82285%P=x86_64-pc-linux-gnu)SEQ(SP=CB%GCD=1%ISR=CE%TI=Z%CI=Z%II=I%TS
+OS:=7)OPS(O1=M5B4ST11NW0%O2=M5B4ST11NW0%O3=M5B4NNT11NW0%O4=M5B4ST11NW0%O5=M
+OS:5B4ST11NW0%O6=M5B4ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16
+OS:A0)ECN(R=Y%DF=Y%T=40%W=16D0%O=M5B4NNSNW0%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=
+OS:S+%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=Y%T=40%W=16A0%S=O%A=S+%F=AS%O=M5B4ST11N
+OS:W0%RD=0%Q=)T4(R=Y%DF=Y%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=FF%
+OS:W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=
+OS:)T7(R=Y%DF=Y%T=FF%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=FF%IPL=164%
+OS:UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=FF%CD=S)
+
+Uptime guess: 0.139 days (since Mon Jul 31 13:46:44 2023)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=203 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Host script results:
+| smb-vuln-cve2009-3103: 
+|   VULNERABLE:
+|   SMBv2 exploit (CVE-2009-3103, Microsoft Security Advisory 975497)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2009-3103
+|           Array index error in the SMBv2 protocol implementation in srv2.sys in Microsoft Windows Vista Gold, SP1, and SP2,
+|           Windows Server 2008 Gold and SP2, and Windows 7 RC allows remote attackers to execute arbitrary code or cause a
+|           denial of service (system crash) via an & (ampersand) character in a Process ID High header field in a NEGOTIATE
+|           PROTOCOL REQUEST packet, which triggers an attempted dereference of an out-of-bounds memory location,
+|           aka "SMBv2 Negotiation Vulnerability."
+|           
+|     Disclosure date: 2009-09-08
+|     References:
+|       http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3103
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3103
+|_smb-vuln-ms10-061: Could not negotiate a connection:SMB: ERROR: Server returned less data than it was supposed to (one or more fields are missing); aborting [14]
+|_samba-vuln-cve-2012-1182: Could not negotiate a connection:SMB: ERROR: Server returned less data than it was supposed to (one or more fields are missing); aborting [14]
+|_smb-vuln-ms10-054: false
+
+Read data files from: /usr/bin/../share/nmap
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jul 31 17:07:17 2023 -- 1 IP address (1 host up) scanned in 323.15 seconds

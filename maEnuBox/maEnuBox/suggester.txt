@@ -1,0 +1,87 @@
+mattermost@ubuntu:/tmp$ bash linux-exploit-suggester.sh
+
+Available information:
+
+Kernel version: 5.0.0
+Architecture: x86_64
+Distribution: ubuntu
+Distribution version: 18.04
+Additional checks (CONFIG_*, sysctl entries, custom Bash commands): performed
+Package listing: from current OS
+
+Searching among:
+
+81 kernel space exploits
+49 user space exploits
+
+Possible Exploits:
+
+[+] [CVE-2021-4034] PwnKit
+
+   Details: https://www.qualys.com/2022/01/25/cve-2021-4034/pwnkit.txt
+   Exposure: probable
+   Tags: [ ubuntu=10|11|12|13|14|15|16|17|18|19|20|21 ],debian=7|8|9|10|11,fedora,manjaro
+   Download URL: https://codeload.github.com/berdav/CVE-2021-4034/zip/main
+
+[+] [CVE-2021-3156] sudo Baron Samedit
+
+   Details: https://www.qualys.com/2021/01/26/cve-2021-3156/baron-samedit-heap-based-overflow-sudo.txt
+   Exposure: probable
+   Tags: mint=19,[ ubuntu=18|20 ], debian=10
+   Download URL: https://codeload.github.com/blasty/CVE-2021-3156/zip/main
+
+[+] [CVE-2021-3156] sudo Baron Samedit 2
+
+   Details: https://www.qualys.com/2021/01/26/cve-2021-3156/baron-samedit-heap-based-overflow-sudo.txt
+   Exposure: probable
+   Tags: centos=6|7|8,[ ubuntu=14|16|17|18|19|20 ], debian=9|10
+   Download URL: https://codeload.github.com/worawit/CVE-2021-3156/zip/main
+
+[+] [CVE-2022-32250] nft_object UAF (NFT_MSG_NEWSET)
+
+   Details: https://research.nccgroup.com/2022/09/01/settlers-of-netlink-exploiting-a-limited-uaf-in-nf_tables-cve-2022-32250/
+https://blog.theori.io/research/CVE-2022-32250-linux-kernel-lpe-2022/
+   Exposure: less probable
+   Tags: ubuntu=(22.04){kernel:5.15.0-27-generic}
+   Download URL: https://raw.githubusercontent.com/theori-io/CVE-2022-32250-exploit/main/exp.c
+   Comments: kernel.unprivileged_userns_clone=1 required (to obtain CAP_NET_ADMIN)
+
+[+] [CVE-2022-2586] nft_object UAF
+
+   Details: https://www.openwall.com/lists/oss-security/2022/08/29/5
+   Exposure: less probable
+   Tags: ubuntu=(20.04){kernel:5.12.13}
+   Download URL: https://www.openwall.com/lists/oss-security/2022/08/29/5/1
+   Comments: kernel.unprivileged_userns_clone=1 required (to obtain CAP_NET_ADMIN)
+
+[+] [CVE-2021-22555] Netfilter heap out-of-bounds write
+
+   Details: https://google.github.io/security-research/pocs/linux/cve-2021-22555/writeup.html
+   Exposure: less probable
+   Tags: ubuntu=20.04{kernel:5.8.0-*}
+   Download URL: https://raw.githubusercontent.com/google/security-research/master/pocs/linux/cve-2021-22555/exploit.c
+   ext-url: https://raw.githubusercontent.com/bcoles/kernel-exploits/master/CVE-2021-22555/exploit.c
+   Comments: ip_tables kernel module must be loaded
+
+[+] [CVE-2019-18634] sudo pwfeedback
+
+   Details: https://dylankatz.com/Analysis-of-CVE-2019-18634/
+   Exposure: less probable
+   Tags: mint=19
+   Download URL: https://github.com/saleemrashid/sudo-cve-2019-18634/raw/master/exploit.c
+   Comments: sudo configuration requires pwfeedback to be enabled.
+
+[+] [CVE-2019-15666] XFRM_UAF
+
+   Details: https://duasynt.com/blog/ubuntu-centos-redhat-privesc
+   Exposure: less probable
+   Download URL: 
+   Comments: CONFIG_USER_NS needs to be enabled; CONFIG_XFRM needs to be enabled
+
+[+] [CVE-2017-0358] ntfs-3g-modprobe
+
+   Details: https://bugs.chromium.org/p/project-zero/issues/detail?id=1072
+   Exposure: less probable
+   Tags: ubuntu=16.04{ntfs-3g:2015.3.14AR.1-1build1},debian=7.0{ntfs-3g:2012.1.15AR.5-2.1+deb7u2},debian=8.0{ntfs-3g:2014.2.15AR.2-1+deb8u2}
+   Download URL: https://github.com/offensive-security/exploit-database-bin-sploits/raw/master/bin-sploits/41356.zip
+   Comments: Distros use own versioning scheme. Manual verification needed. Linux headers must be installed. System must have at least two CPU cores.

@@ -1,0 +1,37 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Sun Jul 30 22:32:08 2023
+URL_BASE: http://192.168.4.101/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+OPTION: Silent Mode
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://192.168.4.101/ ----
++ http://192.168.4.101/~operator (CODE:403|SIZE:273)
++ http://192.168.4.101/~root (CODE:403|SIZE:269)
++ http://192.168.4.101/cgi-bin/ (CODE:403|SIZE:272)
++ http://192.168.4.101/index.html (CODE:200|SIZE:2890)
+==> DIRECTORY: http://192.168.4.101/manual/
+==> DIRECTORY: http://192.168.4.101/mrtg/
+==> DIRECTORY: http://192.168.4.101/usage/
+
+---- Entering directory: http://192.168.4.101/manual/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://192.168.4.101/mrtg/ ----
++ http://192.168.4.101/mrtg/index.html (CODE:200|SIZE:17318)
+
+---- Entering directory: http://192.168.4.101/usage/ ----
++ http://192.168.4.101/usage/index.html (CODE:200|SIZE:3704)
+
+-----------------
+END_TIME: Sun Jul 30 22:32:49 2023
+DOWNLOADED: 13836 - FOUND: 6

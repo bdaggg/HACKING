@@ -1,0 +1,13 @@
+# Nmap 7.94 scan initiated Wed Nov  1 17:48:17 2023 as: nmap -p- -o openPort.txt 192.168.4.114
+Nmap scan report for ubuntu (192.168.4.114)
+Host is up (0.00097s latency).
+Not shown: 65530 closed tcp ports (reset)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+80/tcp   open  http
+3389/tcp open  ms-wbt-server
+8065/tcp open  unknown
+MAC Address: 00:0C:29:6D:93:BD (VMware)
+
+# Nmap done at Wed Nov  1 17:48:19 2023 -- 1 IP address (1 host up) scanned in 2.70 seconds

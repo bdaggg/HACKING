@@ -1,0 +1,13 @@
+/.htaccess           [33m (Status: 403)[0m [Size: 289]
+/.htpasswd           [33m (Status: 403)[0m [Size: 289]
+/.hta                [33m (Status: 403)[0m [Size: 284]
+/assets              [36m (Status: 301)[0m [Size: 314][34m [--> http://192.168.4.105/assets/][0m
+/calendar            [36m (Status: 301)[0m [Size: 316][34m [--> http://192.168.4.105/calendar/][0m
+/cgi-bin/            [33m (Status: 403)[0m [Size: 288]
+/cms                 [36m (Status: 301)[0m [Size: 311][34m [--> http://192.168.4.105/cms/][0m
+/drupal              [36m (Status: 301)[0m [Size: 314][34m [--> http://192.168.4.105/drupal/][0m
+/index.html          [32m (Status: 200)[0m [Size: 3529]
+/javascript          [36m (Status: 301)[0m [Size: 318][34m [--> http://192.168.4.105/javascript/][0m
+/phpmyadmin          [36m (Status: 301)[0m [Size: 318][34m [--> http://192.168.4.105/phpmyadmin/][0m
+/server-status       [33m (Status: 403)[0m [Size: 293]
+/robots.txt          [32m (Status: 200)[0m [Size: 37]
